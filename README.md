@@ -1,2 +1,2 @@
-# tfagaming.github.io
-Website for SimplifiedCaptcha
+# © T.F.A#7524
+## COPYRIGHT
