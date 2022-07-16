@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+
+    <title>SimplifiedCaptcha | Home</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="author" content="SimplifiedCaptcha" />
+    <meta name="image" content="images/pic/favicon.png">
+    <meta name="theme-color" content="#0000FF">
+    <meta name="keywords" content="A verification Discord bot." />
+    <meta name="description"
+        content="An open source Discord verification bot that avoids hacked & generated accounts from raiding servers." />
+    <meta name="robots" content="index, follow, noarchive" />
+    <meta name="googlebot" content="noarchive" />
+</head>
+
+<!-- Go to the top button only works in INDEX.HTML, not seperately -->
+<style>
+    #goToTopButton {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        animation: mymove 25s infinite;
+        animation-duration: 25s;
+    }
+
+    @keyframes mymove {
+
+        0% {
+            background-color: red;
+        }
+
+        10% {
+            background-color: yellow;
+        }
+
+        20% {
+            background-color: orange;
+        }
+
+        30% {
+            background-color: lime;
+        }
+
+        40% {
+            background-color: green;
+        }
+
+        50% {
+            background-color: cyan;
+        }
+
+        60% {
+            background-color: blue;
+        }
+
+        70% {
+            background-color: blueviolet;
+        }
+
+        80% {
+            background-color: violet;
+        }
+
+        90% {
+            background-color: darkred;
+        }
+
+        100% {
+            background-color: red;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <h1 class="important-color">SimplifiedCaptcha</h1>
+        <p><b>A specifial Discord bot that includes Verification, Auto-Moderation,<br>
+                Anti Ghost-pinging and more!</b></p>
+        <a type="button" class="buttonStyle2" href="https://discord.gg/bGNRZcnwWy"><i
+                class="fa fa-external-link-alt"></i> Join our support server</a>
+        <a type="button" class="buttonStyle1"
+            href="https://discord.com/oauth2/authorize?client_id=950097065277521980&scope=bot&permissions=268528696"><i
+                class="fa fa-external-link-alt"></i> Invite
+            our bot</a>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html" class="active"><i class="fa fa-home" title="Home"></i> Home</a>
+        <a href="#about-us"><i class="fa fa-user" title="User"></i> About us</a>
+        <a href="#how-it-works"><i class="fa fa-cogs" title="Engine"></i> How it works</a>
+        <a href="#bot-information"><i class="fa fa-info-circle" title="Info"></i> Bot information</a>
+        <a href="#screenshots"><i class="fa fa-camera" title="Camera"></i> Screenshots</a>
+        <a href="#vote"><i class="fa fa-thumbs-up" title="Thumbs up"></i> Vote</a>
+        <a href="#source-code"><i class="fab fa-github" style="font-size: 14px" title="GitHub"></i> Source code</a>
+    </div>
+
+    <div class="row">
+
+        <div class="side">
+            <h2><i class="fa fa-list-ul"></i> Bot commands:</h2>
+            <h4 class="important-color">Select a command category below and then click on GO.</h4>
+            <h5><a class="green"><strong>Note:</strong></a> The default prefix of the bot is always <b>sc!</b></h5>
+            <i class="fa fa-hand-point-right" style="font-size: 17px; color: white"></i> <select id="select"
+                class="selectMenu" placeholder="Click here">
+                <option value="admin">Administration</option>
+                <option value="swear">Anti-swear</option>
+                <option value="general">General</option>
+                <option value="ghost">Ghost-ping Detector</option>
+                <option value="info">Information</option>
+                <option value="verify">Verification System</option>
+            </select> <button onclick="fetchCategoryButton();"
+                class="selectMenuFetchButton">ㅤ<b><em>Go</em></b>ㅤ</button>
+
+            <p id="admin-P" style="display:none; color: greenyellow"><b>sc!prefix</b></p>
+            <p id="swear-P" style="display:none; color: greenyellow"><a class="red"><b><i
+                            class="fa fa-exclamation-circle" style="font-size:17px;"></i> This module requires Premium
+                        feature.</b></a><b><br>sc!anti-swear<br>sc!add-word<br>sc!del-word<br>sc!saved-words<br>sc!set-infractions</b>
+            </p>
+            <p id="general-P" style="display:none; color: greenyellow"><b>sc!ping<br>sc!verify</b></p>
+            <p id="ghost-P" style="display:none; color: greenyellow"><b>sc!ghost-ping</b></p>
+            <p id="info-P" style="display:none; color: greenyellow"><b>sc!cmds<br>sc!help</b></p>
+            <p id="verify-P" style="display:none; color: greenyellow"><b>sc!setup<br>sc!disable</b></p>
+
+            <hr />
+
+            <h2><i class="fa fa-id-card"></i> Developers:</h2>
+            <h4 class="gold">T.F.A#7524</h4>
+        </div>
+
+        <div class="main">
+            <a name="about-us"></a>
+            <h1>SimplifiedCaptcha v4.1:</h1>
+            <h5>Article last updated: <b>16/07/2022</b></h5>
+
+            <h2>About us:</h2>
+            <p>SimplifiedCaptcha is a Discord bot that protects any Discord server from raids from generated hacked
+                accounts. It generates random captcha codes,
+                so it's going to be 0.0001% of chance from one of the generated hacked accounts to get the correct
+                captcha code. Our bot includes these features below:
+            </p>
+            <ol>
+                <a class="gold">
+                    <li><span><b>Hosted 24/7:</b>
+                </a> The bot is always online, sometimes shuts down when the monitor is timeouted.</span></li>
+                <a class="gold">
+                    <li><span><b>Verification:</b>
+                </a> The bot includes the verification system, it generates random captcha codes.</span></li>
+                <a class="gold">
+                    <li><span><b>Auto Moderation:</b>
+                </a> Our client is having the Anti-swear module, you can enable it.</span></li>
+                <a class="gold">
+                    <li><span><b>Ghost-ping Detector:</b>
+                </a> You can enable this module so you can catch automatically the Ghost pingers.</span></li>
+                <a class="gold">
+                    <li><span><b>Open source:</b>
+                </a> Going to be added soon...</span></li>
+            </ol>
+
+            <a class="yellow"><i class="fa fa-exclamation-triangle" style="font-size:17px;"></i> <b>Some features could
+                    be added in the future.</b></a>
+
+            <a name="how-it-works"></a>
+            <h2>How it works:</h2>
+            <p>
+                SimplifiedCaptcha's verification system generates a random Captcha codes when someone requests the
+                verified role.<br>
+                If an unverified user used the command <b>sc!verify</b>, a text channel will be created for them and
+                they start doing the Captcha verification.<br>
+                If the user didn't provided the correct captcha code, the channel will be automatically deleted in few
+                seconds. Else, if the user didn't provided
+                provided the captcha code in the requested captcha code time, the channel will be automatically deleted.
+                Else, if the captcha code is correct,
+                the bot will add to the user the Verified role and the bot welcomes the user!
+            </p>
+
+            <a name="bot-information"></a>
+            <h2>Bot information:</h2>
+            <p>
+                Client: <b>SimplifiedCaptcha#9285</b><br>
+                ID: <b>950097065277521980</b><br>
+                Created at: <b>Sunday March 06th, 2022</b><br>
+                Bot version: <b>4.1</b><br>
+                Discord.js version: <b>v13.8.1</b><br>
+                Language: <b>JavaScript</b><br>
+                IDE: <b>Visual Studio Code</b><br>
+            </p>
+
+            <a name="screenshots"></a>
+            <h2>Screenshots:</h2>
+            <img src="images/img1.png">
+            <p><em>Screenshot of using the command <b>sc!setup</b>.</em></p>
+            <br>
+            <img src="images/img2.png">
+            <p><em>Screenshot in the verification channel after executing the command <b>sc!setup</b>.</em></p>
+            <br>
+            <img src="images/img3.png">
+            <p><em>Screenshot of using the command <b>sc!verify</b> in the verification channel.</em></p>
+            <br>
+            <img src="images/img4.png">
+            <p><em>Screenshot after typing the correct captcha code.</em></p>
+            <br>
+
+            <a name="vote"></a>
+            <h2>Vote:</h2>
+            <p>
+                <a class="yellow"><i class="fa fa-exclamation-triangle" style="font-size:17px;"></i> <b>Still under
+                        development.</b></a>
+            </p>
+
+            <a name="source-code"></a>
+            <h2>Source code:</h2>
+            <p>
+                <a class="yellow"><i class="fa fa-exclamation-triangle" style="font-size:17px;"></i> <b>Still under
+                        development.</b></a>
+            </p>
+        </div>
+
+    </div>
+
+    <button onclick="functionGoToTopButton()" id="goToTopButton" title="Go to top of the page">Top</button>
+
+    <script>
+        var buttonTop = document.getElementById("goToTopButton");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                buttonTop.style.display = "block";
+            } else {
+                buttonTop.style.display = "none";
+            }
+        }
+
+        function functionGoToTopButton() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <div class="footer">
+        <h3 align="left">
+            <p><b>Contact us:</b></p> <br>
+            <i class="fab fa-discord" style="font-size:20px; color: #5865F2"></i> <a
+                style="font-size: 20px; color: white" href="https://dsc.gg/codingdevelopment">Discord</a> <br>
+            <i class="fab fa-youtube" style="font-size:20px; color: red"></i> <a style="font-size: 20px; color: white"
+                href="https://youtube.com/c/TFA7524">YouTube</a> <br>
+            <i class="fab fa-github" style="font-size:20px; color: gray"></i> <a style="font-size: 20px; color: white"
+                href="https://github.com/TFAGaming">GitHub</a>
+
+            <h3 style="color: gray" align="right">Copyright (©) 2021-2022 - T.F.A 7524 | Development</h3>
+        </h3>
+    </div>
+
+</body>
+
+</html>

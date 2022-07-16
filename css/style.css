@@ -1,0 +1,229 @@
+/* Main */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 400 0.8em verdana, arial, sans-serif;
+    background-color: rgb(85, 85, 85);
+}
+
+.header {
+    padding: 80px;
+    text-align: center;
+    background-image: url(../images/background-img.jpg);
+    color: white;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Texts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol {
+    color: white
+}
+
+/* Images */
+img {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* Back to Main */
+
+::-webkit-scrollbar-track {
+    background: #23272A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #43916b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffcc;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.left {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Colors texts */
+.green {
+    color: rgb(132, 255, 9)
+}
+
+.gold {
+    color: #ff7f00
+}
+
+.yellow {
+    color: yellow
+}
+
+.red {
+    color: rgb(252, 110, 110)
+}
+
+.blue {
+    color: cyan
+}
+
+.important-color {
+    color: #00ffcc
+}
+
+/* Body */
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a.active {
+    background-color: #269d85;
+}
+
+.navbar a:hover {
+    background-color: #47d0b4;
+    color: black;
+}
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+}
+
+.side {
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: rgb(106, 104, 104)1;
+    padding: 20px;
+}
+
+.main {
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: rgb(70, 70, 70);
+    ;
+    padding: 20px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: rgb(77, 77, 77);
+}
+
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Buttons */
+.buttonStyle1 {
+    border: 2px solid;
+    border-color: #2196F3;
+    color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+.buttonStyle1:hover {
+    background: #2196F3;
+    color: white;
+    transition: all 0.8s;
+}
+
+
+.buttonStyle2 {
+    border: 2px solid;
+    border-color: #04AA6D;
+    color: green;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+.buttonStyle2:hover {
+    background-color: #04AA6D;
+    color: white;
+    transition: all 0.8s;
+}
+
+/* Select menu */
+.selectMenu {
+    padding: 2px;
+    font: 400 1em verdana, sans-serif;
+    color: #444;
+    background: #47d0b4;
+    border: 2px solid #1b6b5b;
+    border-radius: 6px;
+}
+
+.selectMenuFetchButton {
+    padding: 2px;
+    font: 400 1em verdana, sans-serif;
+    color: #444;
+    background: #47d0b4;
+    border: 2px solid #1b6b5b;
+    border-radius: 6px;
+}
